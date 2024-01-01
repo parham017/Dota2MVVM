@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/heroFragment">
+
+    <fragment
+        android:id="@+id/heroFragment"
+        android:name="org.phash.gamingmvvmproject.hero.HeroFragment"
+        android:label="fragment_hero"
+        tools:layout="@layout/fragment_hero" >
+        <action
+            android:id="@+id/action_heroFragment_to_heroDetailFragment"
+            app:destination="@id/heroDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/heroDetailFragment"
+        android:name="org.phash.gamingmvvmproject.hero.HeroDetailFragment"
+        android:label="fragment_hero_detail"
+        tools:layout="@layout/fragment_hero_detail" />
+</navigation>
